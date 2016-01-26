@@ -1,0 +1,3 @@
+rootProject.name = 'book-code'
+
+include '02-chapter-practice'

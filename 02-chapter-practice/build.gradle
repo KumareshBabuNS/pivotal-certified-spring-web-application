@@ -1,0 +1,6 @@
+dependencies{
+    compile logDep.slf4jApi
+    compile logDep.slf4jApi
+    compile logDep.logback
+    testCompile testDep.junit
+}

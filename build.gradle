@@ -1,0 +1,34 @@
+allprojects {
+    version = '1.0-SNAPSHOT'
+}
+ext {
+    //test dependecies
+    junitVersion='4.12'
+    testDep = [
+        junit:"junit:junit:$junitVersion"
+    ]
+
+
+    //logger dependecies
+    slf4jVersion='1.7.14'
+    logbackVersion='1.1.3'
+    logDep = [
+        slf4jApi:"org.slf4j:slf4j-api:$slf4jVersion"
+        ,slf4jJcl:"org.slf4j:jcl-over-slf4j:$slf4jVersion"
+        ,logback:"ch.qos.logback:logback-classic:$logbackVersion"
+    ]
+}
+
+subprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    configurations {
+        all*.exclude group: "commons-logging", module: "commons-logging"
+    }
+}
