@@ -1,7 +1,12 @@
 allprojects {
     version = '1.0-SNAPSHOT'
 }
+
 ext {
+    springVersion = '4.2.4.RELEASE'
+    springDep=[
+        springContext:"org.springframework:spring-context:$springVersion"
+    ]
     //test dependecies
     junitVersion='4.12'
     testDep = [
