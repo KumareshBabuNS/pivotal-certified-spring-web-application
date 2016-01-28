@@ -1,0 +1,7 @@
+dependencies{
+    compile springDep.springContext
+    compile logDep.slf4jApi
+    compile logDep.slf4jJcl
+    compile logDep.logback
+    testCompile testDep.junit
+}
