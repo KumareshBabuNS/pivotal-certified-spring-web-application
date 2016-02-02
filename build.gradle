@@ -4,16 +4,20 @@ allprojects {
 
 ext {
     springVersion = '4.2.4.RELEASE'
+    h2Version = '1.4.184'
     springDep=[
         springContext:"org.springframework:spring-context:$springVersion"
+        ,springJdbc:"org.springframework:spring-jdbc:$springVersion"
+    ]
+    //db driver
+    dbDep = [
+        h2:"com.h2database:h2:$h2Version"
     ]
     //test dependecies
     junitVersion='4.12'
     testDep = [
         junit:"junit:junit:$junitVersion"
     ]
-
-
     //logger dependecies
     slf4jVersion='1.7.14'
     logbackVersion='1.1.3'

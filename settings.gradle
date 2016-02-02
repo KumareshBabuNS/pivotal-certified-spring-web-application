@@ -1,5 +1,6 @@
 rootProject.name = 'book-code'
 
 include '02-chapter-practice'
+include '02-chapter-crud-sample'
 include '02-chapter-complete-living-bean'
 
